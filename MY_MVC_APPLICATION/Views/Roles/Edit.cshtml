@@ -1,7 +1,7 @@
 ﻿@model Models.Role
 
 @{
-	string strTitle = "Edit Role";
+	string strTitle = "ویرایش نقش";
 
 	ViewBag.Title = strTitle;
 }
@@ -41,15 +41,15 @@
 
 		<div class="form-group">
 			<div class="col-sm-offset-2 col-sm-10">
-				<button type="submit" class="btn btn-primary">Save</button>
-				<button type="reset" class="btn btn-default">Reset</button>
+				<button type="submit" class="btn btn-primary">ذخیره</button>
+				<button type="reset" class="btn btn-default">حالت اولیه</button>
 			</div>
 		</div>
 	</div>
 }
 
 <div class="links">
-	@Html.ActionLink("Details", MVC.Roles.Details(Model.Id)) |
-	@Html.ActionLink("Delete", MVC.Roles.Delete(Model.Id)) |
-	@Html.ActionLink("Back to List", MVC.Roles.Index())
+	@Html.ActionLink("نمایش", MVC.Roles.Details(Model.Id)) |
+	@Html.ActionLink("حذف", MVC.Roles.Delete(Model.Id)) |
+	@Html.ActionLink("بازگشت به فهرست", MVC.Roles.Index())
 </div>

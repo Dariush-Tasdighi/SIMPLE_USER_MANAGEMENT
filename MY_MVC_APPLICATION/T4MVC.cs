@@ -1553,6 +1553,7 @@ namespace Links
 		public const string UrlPath = "~/Content";
 		public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
 		public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+    	public static readonly string bootstrap_rtl_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/bootstrap-rtl.min.css") ? Url("bootstrap-rtl.min.css") : Url("bootstrap-rtl.css");
     	public static readonly string bootstrap_rtl_css_map = Url("bootstrap-rtl.css.map");
     	public static readonly string bootstrap_rtl_min_css = Url("bootstrap-rtl.min.css");
     	public static readonly string bootstrap_theme_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/bootstrap-theme.min.css") ? Url("bootstrap-theme.min.css") : Url("bootstrap-theme.css");
@@ -1572,6 +1573,7 @@ namespace Links
         	public static readonly string glyphicons_halflings_regular_svg = Url("glyphicons-halflings-regular.svg");
         	public static readonly string glyphicons_halflings_regular_ttf = Url("glyphicons-halflings-regular.ttf");
         	public static readonly string glyphicons_halflings_regular_woff = Url("glyphicons-halflings-regular.woff");
+        	public static readonly string YekanWeb_Regular_woff = Url("YekanWeb-Regular.woff");
     	}
     
     	public static readonly string Site_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/Site.min.css") ? Url("Site.min.css") : Url("Site.css");
@@ -2963,6 +2965,7 @@ namespace Links
             }
             public static class Assets
             {
+                public const string bootstrap_rtl_css = "~/Content/bootstrap-rtl.css";
                 public const string bootstrap_rtl_min_css = "~/Content/bootstrap-rtl.min.css";
                 public const string bootstrap_theme_css = "~/Content/bootstrap-theme.css";
                 public const string bootstrap_theme_min_css = "~/Content/bootstrap-theme.min.css";

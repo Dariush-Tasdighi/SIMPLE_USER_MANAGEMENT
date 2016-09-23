@@ -1,7 +1,7 @@
 ﻿@model Models.Role
 
 @{
-	string strTitle = "Role Details";
+	string strTitle = "نمایش نقش";
 
 	ViewBag.Title = strTitle;
 }
@@ -33,7 +33,7 @@
 </div>
 
 <div class="links">
-	@Html.ActionLink("Edit", MVC.Roles.Edit(Model.Id)) |
-	@Html.ActionLink("Delete", MVC.Roles.Delete(Model.Id)) |
-	@Html.ActionLink("Back to List", MVC.Roles.Index())
+	@Html.ActionLink("ویرایش", MVC.Roles.Edit(Model.Id)) |
+	@Html.ActionLink("حذف", MVC.Roles.Delete(Model.Id)) |
+	@Html.ActionLink("بازگشت به فهرست", MVC.Roles.Index())
 </div>

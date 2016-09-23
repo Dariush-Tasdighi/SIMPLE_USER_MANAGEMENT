@@ -1,7 +1,7 @@
 ﻿@model Models.Role
 
 @{
-	string strTitle = "Delete Role";
+	string strTitle = "حذف نقش";
 
 	ViewBag.Title = strTitle;
 }
@@ -13,7 +13,7 @@
 <hr />
 
 <h3>
-	Are you sure you want to delete this?
+	آیا به حذف این نقش اطمینان دارید؟
 </h3>
 
 <div>
@@ -40,13 +40,13 @@
 		@Html.AntiForgeryToken()
 
 		<div class="form-actions no-color">
-			<button type="submit" class="btn btn-primary">Delete</button>
+			<button type="submit" class="btn btn-primary">حذف</button>
 		</div>
 	}
 </div>
 
 <div class="links">
-	@Html.ActionLink("Details", MVC.Roles.Details(Model.Id)) |
-	@Html.ActionLink("Edit", MVC.Roles.Edit(Model.Id)) |
-	@Html.ActionLink("Back to List", MVC.Roles.Index())
+	@Html.ActionLink("نمایش", MVC.Roles.Details(Model.Id)) |
+	@Html.ActionLink("ویرایش", MVC.Roles.Edit(Model.Id)) |
+	@Html.ActionLink("بازگشت به فهرست", MVC.Roles.Index())
 </div>

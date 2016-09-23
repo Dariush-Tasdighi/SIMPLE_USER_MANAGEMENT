@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Models.Role>
 
 @{
-	string strTitle = "Roles List";
+	string strTitle = "فهرست نقش‌ها";
 
 	ViewBag.Title = strTitle;
 }
@@ -11,15 +11,17 @@
 </h2>
 
 <div class="links">
-	@Html.ActionLink("Create New", MVC.Roles.Create())
+	@Html.ActionLink("ایجاد نقش", MVC.Roles.Create(), new { @class = "btn btn-primary" })
 </div>
+
+<hr />
 
 <div class="row">
 	<div class="col-sm-12 table-responsive">
 		<table class="table table-bordered table-condensed table-striped table-hover">
 			<tr>
-				<th></th>
-				<th>
+				<th style="width: 150px;"></th>
+				<th style="width: 150px;">
 					@*Is Active*@
 					@*وضعیت*@
 					@Html.DisplayNameFor(model => model.IsActive)
@@ -33,9 +35,9 @@
 			{
 				<tr>
 					<td>
-						@Html.ActionLink("Details", MVC.Roles.Details(item.Id)) |
-						@Html.ActionLink("Edit", MVC.Roles.Edit(item.Id)) |
-						@Html.ActionLink("Delete", MVC.Roles.Delete(item.Id))
+						@Html.ActionLink("نمایش", MVC.Roles.Details(item.Id)) |
+						@Html.ActionLink("ویرایش", MVC.Roles.Edit(item.Id)) |
+						@Html.ActionLink("حذف", MVC.Roles.Delete(item.Id))
 					</td>
 					<td>
 						@Html.DisplayFor(modelItem => item.IsActive)

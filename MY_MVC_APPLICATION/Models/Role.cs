@@ -9,11 +9,14 @@
 
 		// **********
 		[System.ComponentModel.DataAnnotations.Display
-			(Name = "Active")]
+			(Name = "فعال")]
 		public bool IsActive { get; set; }
 		// **********
 
 		// **********
+		[System.ComponentModel.DataAnnotations.Display
+			(Name = "نام")]
+
 		[System.ComponentModel.DataAnnotations.Required
 			(AllowEmptyStrings = false)]
 
